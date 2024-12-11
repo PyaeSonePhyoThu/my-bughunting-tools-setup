@@ -36,3 +36,19 @@ git clone https://github.com/danielmiessler/SecLists.git
 echo "Install Katana Tool"
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 sudo cp ~/go/bin/katana /bin/
+
+echo "Installing waybackurls"
+go install github.com/tomnomnom/waybackurls@latest
+sudo cp ~/go/bin/waybackurls /bin/
+
+echo "Installing gauplus"
+go install github.com/bp0lr/gauplus@latest
+sudo cp ~/go/bin/gauplus /bin/
+
+echo "Installing LinkFinder"
+git clone https://github.com/GerbenJavado/LinkFinder.git
+cd LinkFinder
+sudo pip3 install -r requirements
+sudo python3 setup.py install
+cd ../
+
